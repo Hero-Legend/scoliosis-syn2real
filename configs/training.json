@@ -1,0 +1,137 @@
+{
+  "backbone": {
+    "name": "vit_small_patch14_dinov2.lvd142m",
+    "official_weight_path": "SET_BY_PUBLIC_ENTRY_POINT",
+    "official_weight_sha256": "b938bf1bc15cd2ec0feacfe3a1bb553fe8ea9ca46a7e1d8d00217f29aef60cd9",
+    "input_size": 518,
+    "grayscale_to_rgb": "replicate channels",
+    "resize": "preserve aspect ratio and letterbox to square",
+    "padding": "per-image median",
+    "intensity": "clip 0.5-99.5 percentiles then rescale to [0,1]"
+  },
+  "training": {
+    "optimizer": "AdamW",
+    "backbone_learning_rate": 5e-05,
+    "head_learning_rate": 0.0005,
+    "weight_decay": 0.05,
+    "epochs": 80,
+    "warmup_epochs": 5,
+    "scheduler": "cosine decay",
+    "effective_target_batch_size": 32,
+    "micro_target_batch_size": 4,
+    "gradient_accumulation_steps": 8,
+    "gradient_checkpointing": false,
+    "num_workers": 8,
+    "evaluation_batch_size": 32,
+    "amp": "bfloat16",
+    "early_stopping": {
+      "enabled": false,
+      "monitor": "validation_qwk",
+      "patience": 12,
+      "tie_break": [
+        "higher_macro_f1",
+        "lower_grade_mae",
+        "earlier_epoch"
+      ],
+      "reason": "all paired routes execute the same frozen target-training budget; Validation selects the checkpoint but cannot shorten training"
+    },
+    "joint_training": {
+      "target_examples_per_epoch": "all visible real cases exactly once before final short batch",
+      "synthetic_examples_per_epoch": "one replacement draw per visible real case",
+      "synthetic_loss_weight": 0.5,
+      "optimizer_updates": "identical to paired real-only and synthetic-pretrained fits",
+      "target_exposure_budget": "identical across all three routes within seed and budget"
+    },
+    "checkpoint_selection": {
+      "source_pretraining": "fixed final epoch 80; no real Development or Validation labels",
+      "target_fits": "best fixed Validation checkpoint under QWK/Macro-F1/Grade-MAE/earlier-epoch order"
+    },
+    "storage_policy": {
+      "preserve": [
+        "final.pt",
+        "completion.json",
+        "epochs.jsonl",
+        "best_validation_predictions.csv"
+      ],
+      "remove_after_success": [
+        "best.pt",
+        "last.pt"
+      ],
+      "reason": "best.pt is copied into final.pt and last.pt is only a resume artifact; removing redundant checkpoints keeps the 60-fit matrix within server capacity"
+    },
+    "augmentation": {
+      "rotation_degrees": 7,
+      "scale": [
+        0.9,
+        1.1
+      ],
+      "translation_fraction_max": 0.05,
+      "horizontal_flip_probability": 0.5,
+      "brightness_fraction": 0.15,
+      "contrast_fraction": 0.15,
+      "gamma": [
+        0.8,
+        1.2
+      ],
+      "gaussian_noise": true,
+      "mild_blur": true,
+      "forbidden": [
+        "large_random_crop",
+        "elastic_deformation",
+        "strong_perspective",
+        "CutMix",
+        "MixUp"
+      ]
+    }
+  },
+  "evaluation": {
+    "ece_equal_width_bins": 10,
+    "brier_definition": "mean multiclass squared probability error summed over three grades",
+    "primary_metric": "QWK",
+    "metrics": [
+      "QWK",
+      "MacroF1",
+      "BalancedAccuracy",
+      "GradeMAE",
+      "SevereErrorRate",
+      "ECE",
+      "Brier"
+    ]
+  },
+  "label_budget_seeds": [
+    2026081901,
+    2026081902,
+    2026081903,
+    2026081904,
+    2026081905
+  ],
+  "budgets_percent": [
+    10,
+    25,
+    50,
+    100
+  ],
+  "methods": [
+    {
+      "method_id": "C1_R1_REAL_ONLY_CE",
+      "target_objective": "softmax_cross_entropy",
+      "source_pretraining": false,
+      "joint_training": false
+    },
+    {
+      "method_id": "C1_R2_SYN_PRETRAIN_CE",
+      "target_objective": "softmax_cross_entropy",
+      "source_pretraining": true,
+      "source_objective": "softmax_cross_entropy",
+      "joint_training": false,
+      "shared_source_checkpoint_id": "C1_SYN_CE_PRETRAIN_V1"
+    },
+    {
+      "method_id": "C1_R3_NAIVE_JOINT_CE",
+      "target_objective": "softmax_cross_entropy",
+      "source_pretraining": false,
+      "joint_training": true,
+      "source_weighting": "uniform"
+    }
+  ]
+}

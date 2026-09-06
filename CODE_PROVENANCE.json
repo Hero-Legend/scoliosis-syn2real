@@ -1,0 +1,290 @@
+[
+  {
+    "module": "engine/utils.py",
+    "function": "stable_seed",
+    "source_module": "b0_training_utils.py",
+    "function_sha256": "e3990ad2a071818d70f43dbcbbd3666850054383ce42bad94aabd489022e4d58"
+  },
+  {
+    "module": "engine/utils.py",
+    "function": "amp_optimizer_step_succeeded",
+    "source_module": "b0_training_utils.py",
+    "function_sha256": "5d42f5d5fce0c29a18620d9e2d0990f0dbbcabc26a1f75d20b28e653d150a0e7"
+  },
+  {
+    "module": "engine/utils.py",
+    "function": "ordinal_targets",
+    "source_module": "b0_training_utils.py",
+    "function_sha256": "d6c05dbed8d4a3095889fb2ecd2e42f7d8388cb1a3f2e96c73d2a7869d1dd213"
+  },
+  {
+    "module": "engine/utils.py",
+    "function": "decode_ordinal_probabilities",
+    "source_module": "b0_training_utils.py",
+    "function_sha256": "aa5850e7ad78553d1dc333f493e0f40b15a8f261cd3646aaf42f0163f6be9b5c"
+  },
+  {
+    "module": "engine/utils.py",
+    "function": "confusion_matrix_3",
+    "source_module": "b0_training_utils.py",
+    "function_sha256": "d32f377f0d49ef9343afd6e574f1ff7bb19cbeff892e6762a4e9a4d0298c0a46"
+  },
+  {
+    "module": "engine/utils.py",
+    "function": "quadratic_weighted_kappa",
+    "source_module": "b0_training_utils.py",
+    "function_sha256": "d8b347b3444615cb0645ecc9ea0a9187495c94e011131235d1556152b52bb124"
+  },
+  {
+    "module": "engine/utils.py",
+    "function": "classification_metrics",
+    "source_module": "b0_training_utils.py",
+    "function_sha256": "9bb6c1e3d563447e25a0047cf4cfe282dc28312d010bb651f5da6755521fb2c5"
+  },
+  {
+    "module": "engine/utils.py",
+    "function": "expected_microsteps",
+    "source_module": "b0_training_utils.py",
+    "function_sha256": "7cfd9186f809b8a4f3175996f92745d55a85b9e2e01d8351c25dc9c919f4de56"
+  },
+  {
+    "module": "engine/utils.py",
+    "function": "validate_budget_rows",
+    "source_module": "b0_training_utils.py",
+    "function_sha256": "a3bb7a84ca563a44506a5f7e17b791cbb58f1a3ccdf9acf73381e05bc503b3b1"
+  },
+  {
+    "module": "engine/model.py",
+    "function": "set_determinism",
+    "source_module": "run_b0_training.py",
+    "function_sha256": "1ef8bddf8cfdc20f166384b28c12acaf8b9dfa6e10f482dd1183c0a2e677f72b"
+  },
+  {
+    "module": "engine/model.py",
+    "function": "_clip_and_rescale",
+    "source_module": "run_b0_training.py",
+    "function_sha256": "94f199aafd8995c099f1e69058608e948d45ba4af81fa3435d94b0aa2edc6a7b"
+  },
+  {
+    "module": "engine/model.py",
+    "function": "prepare_image",
+    "source_module": "run_b0_training.py",
+    "function_sha256": "1cd564fade0020994a6ca8c12e26ffa862ffcc906cdc3eaf063c054437679785"
+  },
+  {
+    "module": "engine/model.py",
+    "function": "build_torch_components",
+    "source_module": "run_b0_training.py",
+    "function_sha256": "d820ed672cc99a601665afb14643476027ac84ba56ac87ecda0617d004942c7c"
+  },
+  {
+    "module": "engine/model.py",
+    "function": "loss_for",
+    "source_module": "run_b0_training.py",
+    "function_sha256": "9181fcb7a4311da43b00169bcb4994cd39be71c1bf1d785f1a5e8a61c0e7571e"
+  },
+  {
+    "module": "engine/model.py",
+    "function": "probabilities_and_predictions",
+    "source_module": "run_b0_training.py",
+    "function_sha256": "d0c076b6b157e7009e8b680c7192f5197cca016de9733f7daa47185d2eb4ebb4"
+  },
+  {
+    "module": "engine/model.py",
+    "function": "make_dataset",
+    "source_module": "run_b0_training.py",
+    "function_sha256": "430528b29a818b92a61ab1091b797258054ab7a37f49cd3fda3c947d4ea7f345"
+  },
+  {
+    "module": "engine/model.py",
+    "function": "make_loader",
+    "source_module": "run_b0_training.py",
+    "function_sha256": "d0affb76744b1ebc5aab1977bbb57c318f056bd3e78b471742db9c2b3af39f0b"
+  },
+  {
+    "module": "engine/model.py",
+    "function": "make_eval_loader",
+    "source_module": "run_b0_training.py",
+    "function_sha256": "242bbd66da8cb2743b8a9ec187d1d53cc117f91bae75848b7ff4de2b9efa2aa5"
+  },
+  {
+    "module": "engine/model.py",
+    "function": "create_optimizer_scheduler",
+    "source_module": "run_b0_training.py",
+    "function_sha256": "e85d9b165fa1fbeed1384540924da60fc9d9e57a30df22ac8732b5274b27305e"
+  },
+  {
+    "module": "engine/model.py",
+    "function": "validate_optimizer_step_authority",
+    "source_module": "run_b0_training.py",
+    "function_sha256": "4ecdc933991a555fd5227df7841fe7cd8c92a2b1968fa9308243b4681c841cc7"
+  },
+  {
+    "module": "engine/model.py",
+    "function": "atomic_torch_save",
+    "source_module": "run_b0_training.py",
+    "function_sha256": "a5415f24fa927e500844b5e5c1f7374f9ca3a0611ef137f41aed24cf5036a374"
+  },
+  {
+    "module": "engine/model.py",
+    "function": "better_metrics",
+    "source_module": "run_b0_training.py",
+    "function_sha256": "1ac7bc5c56382c68c18eeea5a82f7cdea0df889d8f3731a21bb2a05219634921"
+  },
+  {
+    "module": "engine/training.py",
+    "function": "sha256_file",
+    "source_module": "run_c1_training.py",
+    "function_sha256": "13a058cb0c10286ac96cdaf4688b700c6dc30aff241dfc4fa03d4c781d6884f7"
+  },
+  {
+    "module": "engine/training.py",
+    "function": "read_csv",
+    "source_module": "run_c1_training.py",
+    "function_sha256": "4828454b41c4eb3b3fef169000ad32a9923fe7324f80b572b29dead1f46923e6"
+  },
+  {
+    "module": "engine/training.py",
+    "function": "atomic_json",
+    "source_module": "run_c1_training.py",
+    "function_sha256": "c1a374264dd3898bc33d1aa4878b43fd83c55ea9dc8737ab4467c9596af6ddbe"
+  },
+  {
+    "module": "engine/training.py",
+    "function": "amp_dtype",
+    "source_module": "run_c1_training.py",
+    "function_sha256": "6e0cfcfd330821d0d26e9f0b2ce5cc27bd0cf344b4f8bd70d47df9af74faff60"
+  },
+  {
+    "module": "engine/training.py",
+    "function": "create_grad_scaler",
+    "source_module": "run_c1_training.py",
+    "function_sha256": "d1bb648c1535f2dde9f345d577c8cd34d34701139c6966c5830fb27846df1c00"
+  },
+  {
+    "module": "engine/training.py",
+    "function": "expected_optimizer_steps",
+    "source_module": "run_c1_training.py",
+    "function_sha256": "32707263199ffc8b26b0eef4ca206fdbfb326aef6ac2e56be829a0ffaf68bcd5"
+  },
+  {
+    "module": "engine/training.py",
+    "function": "set_determinism",
+    "source_module": "run_c1_training.py",
+    "function_sha256": "1ef8bddf8cfdc20f166384b28c12acaf8b9dfa6e10f482dd1183c0a2e677f72b"
+  },
+  {
+    "module": "engine/training.py",
+    "function": "train_epoch",
+    "source_module": "run_c1_training.py",
+    "function_sha256": "f51dacca2d9f80a141c8047a38c4a1e681bc8699e7fef4381753ca0699badaa8"
+  },
+  {
+    "module": "engine/training.py",
+    "function": "reliability_metrics",
+    "source_module": "run_c1_training.py",
+    "function_sha256": "b560ebd2aea0aac58c335196107b92488af86d816a1cf6fa5d157d8aa7cd4e05"
+  },
+  {
+    "module": "engine/training.py",
+    "function": "all_numeric_values_finite",
+    "source_module": "run_c1_training.py",
+    "function_sha256": "00df337fc5751b133621904a525fd2f3117c3b2a4ddce9867efa3eb7baa5a4c7"
+  },
+  {
+    "module": "engine/training.py",
+    "function": "evaluate",
+    "source_module": "run_c1_training.py",
+    "function_sha256": "b9f00c2c86bd6175d2551f97e914ad9e628d8cdf5d0a60fd8edf9f66529f8a19"
+  },
+  {
+    "module": "engine/training.py",
+    "function": "_timed_update",
+    "source_module": "run_c1_training.py",
+    "function_sha256": "51a58927a6e608a947b836b723bdc37483c41a872b5a89fa943cb1fd1cbf8d16"
+  },
+  {
+    "module": "engine/training.py",
+    "function": "run_preflight",
+    "source_module": "run_c1_training.py",
+    "function_sha256": "e5633fe8d19bbe8624ebbce77267ad9092ee05eab3f6b6ebf55aea99ed19aa68"
+  },
+  {
+    "module": "engine/training.py",
+    "function": "_write_predictions",
+    "source_module": "run_c1_training.py",
+    "function_sha256": "0aec44c290977b94429e3010953c7adb02d040ce470a3802a2cc61983beb3194"
+  },
+  {
+    "module": "engine/training.py",
+    "function": "run_job",
+    "source_module": "run_c1_training.py",
+    "function_sha256": "204c17929214977bd7825b1a65356e9a1b013e50cf2a09be5243214a8c6bcc82"
+  },
+  {
+    "module": "engine/statistics.py",
+    "function": "group_resample_indices",
+    "source_module": "validate_t1_locked.py",
+    "function_sha256": "f899eb302997d32d3194497f38f328e004bf6de5627831df0284669fe7fe7f65"
+  },
+  {
+    "module": "engine/statistics.py",
+    "function": "hierarchical_bootstrap",
+    "source_module": "validate_t1_locked.py",
+    "function_sha256": "08364ea7b19bcae62a37ad6a6e3425556db885720eb647cf0767eb7a10a9fe7f"
+  },
+  {
+    "module": "engine/statistics.py",
+    "function": "holm_adjust",
+    "source_module": "validate_t1_locked.py",
+    "function_sha256": "aa8234f3f97b3666411d19391b040a7adacdbcf042ead8222d52d24f2ee005d6"
+  },
+  {
+    "module": "engine/statistics.py",
+    "function": "risk_coverage",
+    "source_module": "validate_t1_locked.py",
+    "function_sha256": "182694e0fde4f2f2ea3b4849c93c54431391c2f83b840004702f78e449eaa74c"
+  },
+  {
+    "module": "engine/sensitivity.py",
+    "function": "draw_summary",
+    "source_module": "analyze_t1_sensitivity.py",
+    "function_sha256": "8dd4e10c173da88c340f08fe9254ad69da8e31dc815e52de2d4224aaee2816f8"
+  },
+  {
+    "module": "engine/sensitivity.py",
+    "function": "qwk_gain",
+    "source_module": "analyze_t1_sensitivity.py",
+    "function_sha256": "cf6dfaaa481d8a9f44626a515e3d283b9b651ba2d142bf78e947b485824ff003"
+  },
+  {
+    "module": "engine/sensitivity.py",
+    "function": "group_only_gain_draws",
+    "source_module": "analyze_t1_sensitivity.py",
+    "function_sha256": "762cc4a96e1521cdb5df76a645f977791d3611c46fd19c7b6bc1bb8061dea34b"
+  },
+  {
+    "module": "engine/sensitivity.py",
+    "function": "seed_only_gain_draws",
+    "source_module": "analyze_t1_sensitivity.py",
+    "function_sha256": "193ca2bd15360b82668fcfbd27689762fd4c32a76642f2b412f7f02bfe1ac2bd"
+  },
+  {
+    "module": "engine/sensitivity.py",
+    "function": "hierarchical_gain_draws",
+    "source_module": "analyze_t1_sensitivity.py",
+    "function_sha256": "e8b8248c43207820410a171446058b59db388f980666dd8474227bef1782526b"
+  },
+  {
+    "module": "engine/sensitivity.py",
+    "function": "threshold_margin",
+    "source_module": "analyze_t1_sensitivity.py",
+    "function_sha256": "772fce44c5a407d27be3b322acbc58cb7c1692033eeb4d1e564827df5f476cb2"
+  },
+  {
+    "module": "engine/sensitivity.py",
+    "function": "threshold_draws",
+    "source_module": "analyze_t1_sensitivity.py",
+    "function_sha256": "18e5a08fdac57527fa91e3c333100469c02c48fd07cb89ed5b4388294af235a7"
+  }
+]
